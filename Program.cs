@@ -11,7 +11,9 @@ namespace poligon202610a
         static void Main(string[] args)
         {
             //Vanja Vidosavljevic
-            Console.WriteLine("Zdravo");
+            tacka a = new tacka(-1, -1);
+            Console.WriteLine(a.ugao());
+            Console.WriteLine(a.d());
         }
     }
 }
