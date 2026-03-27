@@ -27,5 +27,12 @@ namespace poligon202610a
         {
             return Math.Atan2(y, x) * 180 / Math.PI;
         }
+        public static bool jednake(tacka A, tacka B)
+        {
+            if ((A.x == B.x) && (A.y == B.y))
+            {
+                return true;
+            }
+        }
     }
 }

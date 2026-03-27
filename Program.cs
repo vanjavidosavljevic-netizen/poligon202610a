@@ -11,36 +11,42 @@ namespace poligon202610a
         static void Main(string[] args)
         {
             //Vanja Vidosavljevic
-            tacka a = new tacka(-1, -1);
-            Console.WriteLine(a.ugao());
-            Console.WriteLine(a.d());
-            tacka A = new tacka(3, 1);
-            tacka B = new tacka(-1, 3);
-            tacka C = new tacka(3, 3);
-            vektor OA = new vektor(A);
-            vektor OB = new vektor(B);
-            vektor AC = new vektor(A, C);
-            Console.WriteLine(vektor.SP(OA, OB));
-            Console.WriteLine(vektor.VP(OA, AC));
-            
-            /*
-            tacka A = new tacka(1, 2);
-            tacka B = new tacka(3, 2);
-            tacka C = new tacka(2, 3);
-            tacka D = new tacka(2, 2);
-            vektor AB = new vektor(A, B);
-            Console.WriteLine(ravan.SIS(AB, C, D));
-            Console.WriteLine("Koliko temena?");
-            int n=Convert.ToInt32(Console.ReadLine());
-            poligon prvi = new poligon(n);
-            */
+            /* tacka a = new tacka(-1, -1);
+             Console.WriteLine(a.ugao());
+             Console.WriteLine(a.d());
+             tacka A = new tacka(3, 1);
+             tacka B = new tacka(-1, 3);
+             tacka C = new tacka(3, 3);
+             vektor OA = new vektor(A);
+             vektor OB = new vektor(B);
+             vektor AC = new vektor(A, C);
+             Console.WriteLine(vektor.SP(OA, OB));
+             Console.WriteLine(vektor.VP(OA, AC));
+
+             /*
+             tacka A = new tacka(1, 2);
+             tacka B = new tacka(3, 2);
+             tacka C = new tacka(2, 3);
+             tacka D = new tacka(2, 2);
+             vektor AB = new vektor(A, B);
+             Console.WriteLine(ravan.SIS(AB, C, D));
+             Console.WriteLine("Koliko temena?");
+             int n=Convert.ToInt32(Console.ReadLine());
+             poligon prvi = new poligon(n);
+             */
             // prvi.unos();
             // prvi.stampaj();
             // prvi.snimi();
+            /* poligon drugi = new poligon(4);
+             drugi.unos();
+             drugi.snimi();
+             drugi.stampaj();*/
+            //drugi.stampaj();
+            //double obim = drugi.obim();
+            //Console.WriteLine("Obim="+obim.ToString());
             poligon drugi = poligon.ucitaj();
-            drugi.stampaj();
-            double obim = drugi.obim();
-
+            vektor[] str = drugi.stranice();
+            Console.WriteLine(vektor.seku_se(str[0], str[2]));
         }
     }
 }

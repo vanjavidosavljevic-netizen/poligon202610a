@@ -40,10 +40,20 @@ namespace poligon202610a
                 double k = A.x * B.y - A.y * B.x;
                 return k;
             }
-            double duzina()
+            public double duzina()
             {
                 tacka finalna = this.centriraj();
                 return finalna.d();
             }
+        static public bool seku_se(vektor a, vektor b)
+        {
+            int a_b = ravan.SIS(a, b.pocetak, b.kraj);
+            int b_a = ravan.SIS(b, a.pocetak, a.kraj);
+            if(a_b * b_a != 0)
+            {
+                return true;
+            }
+            return false;
+        }
         }
     }
