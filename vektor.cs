@@ -8,28 +8,42 @@ namespace poligon202610a
 {
     internal class vektor
     {
-        tacka pocetak;
-        tacka kraj;
-        public vektor(tacka A, tacka B)
-        {
-            pocetak = A;
-            kraj = B;
-        }
-        public vektor(tacka A)
-        {
-            tacka poc = new tacka();
-            pocetak = poc;
-            kraj = A;
-        }
-        public tacka centriraj()
-        {
-            double x = kraj.x - pocetak.x;
-            double y = kraj.y - pocetak.y;
-            return new tacka(x, y);
-        }
-        public double SP(vektor a, vektor b)
-        {
-            return 0;
+            public tacka pocetak;
+            public tacka kraj;
+            public vektor(tacka A, tacka B)
+            {
+                pocetak = A;
+                kraj = B;
+            }
+            public vektor(tacka A)
+            {
+                tacka poc = new tacka();
+                pocetak = poc;
+                kraj = A;
+            }
+            public tacka centriraj()
+            {
+                double x = kraj.x - pocetak.x;
+                double y = kraj.y - pocetak.y;
+                return new tacka(x, y);
+            }
+            static public double SP(vektor a, vektor b)
+            {
+                tacka A = a.centriraj();
+                tacka B = b.centriraj();
+                return A.x * B.x + A.y * B.y;
+            }
+            static public double VP(vektor a, vektor b)
+            {
+                tacka A = a.centriraj();
+                tacka B = b.centriraj();
+                double k = A.x * B.y - A.y * B.x;
+                return k;
+            }
+            double duzina()
+            {
+                tacka finalna = this.centriraj();
+                return finalna.d();
+            }
         }
     }
-}

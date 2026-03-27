@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="poligon.cs" />
+    <Compile Include="ravan.cs" />
     <Compile Include="vektor.cs" />
     <Compile Include="tacka.cs" />
     <Compile Include="Program.cs" />
